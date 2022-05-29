@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+@media (max-width:787px) {
+    .container {
+        background-position: right 35vw bottom 50vh, left 30vw top 50vh;
+    }
+}
+
+.container .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 1px 70px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width:375px) {
+    .container .box {
+        width: 300px;
+    }
+}
+
+.container .box .background {
+    position: relative;
+}
+
+.container .box img {
+    display: block;
+}
+
+.container .box img:first-child {
+    width: 500px
+}
+
+@media (max-width:787px) {
+    .container .box img:first-child {
+        width: auto;
+    }
+}
+
+.container .box img:nth-child(2) {
+    position: relative;
+    left: 50%;
+    top: calc(-96px /2);
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid white;
+}
+
+.container .box .text {
+    text-align: center;
+    display: block;
+}
+
+.container .box .text h2 {
+    color: hsl(229, 23%, 23%);
+    padding-bottom: 20px;
+}
+
+.container .box .text h2>span {
+    font-weight: normal;
+    color: hsl(227, 10%, 46%);
+    margin-left: 10px;
+}
+
+.container .box .text span {
+    letter-spacing: 1px;
+    color: hsl(227, 10%, 46%);
+}
+
+.container .box .text .media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid hsl(0, 0%, 59%);
+}
+
+.container .box .text .media ul {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .box .text .media ul li h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.container .box .text .media ul li p {
+    letter-spacing: 1.5px;
+    padding-top: 10px;
+    color: hsl(227, 10%, 46%);
+}
